@@ -44,7 +44,12 @@ public class Controller1 {
         myMap.put("foo1", new Foo("foo1",1));
         model.addAttribute(myMap);
     }
-
+    @ModelAttribute // ${linkedHashMap}
+    public void implicitMap2(Model model){
+        Map<String,String> myMap = new LinkedHashMap<>();
+        myMap.put("mapkey1","mapvalue1" );
+        model.addAttribute(myMap);
+    }
     @RequestMapping("/view1")
     public String view1(ModelMap model) {
         model.addAttribute("view1_attr1", "view1_attr1");

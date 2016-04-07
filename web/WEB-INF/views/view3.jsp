@@ -6,9 +6,10 @@
 <body>
 method-level attribute: ${view3_attr1}
 <p/>
+
 controller-level attribute: ${controller2ModelAttr}
 <p/>
-implicit model attributes from controller: ${string}, ${stringList[0]}, ${fooList[0].fooStr}
+implicit model attributes from controller: ${string}, ${stringList[0]}, ${fooList}, ${integerList[0]}
 </p>
 from different controller (should not be resolved): ${controller3ModelAttr}
 <p/>

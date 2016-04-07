@@ -6,10 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * *******************************
@@ -38,11 +35,29 @@ public class Controller2 {
 
     @ModelAttribute // ${fooList}
     public void implicitFooSet(Model model){
-        Set<Foo> fooSet = new HashSet<>();
+        Set<Foo> fooSet = new HashSet<Foo>();
         fooSet.add(new Foo("foo1",1));
+        fooSet.add(new Foo("foo2",2));
         model.addAttribute(fooSet);
-        //    Set keys = model.asMap().keySet();
+
     }
+
+    @ModelAttribute // no attributes for empty lists!
+    public void implicitEmptyList(Model model){
+        List<Number> list = new ArrayList<>();
+        //list.add(1);
+        model.addAttribute(list);
+
+    }
+    @ModelAttribute // ${integerList}
+    public void implicitAutodetectedTypeList(Model model){
+        List list = new ArrayList<>();
+        list.add(1);
+        list.add("2");
+        model.addAttribute(list);
+
+    }
+
     @RequestMapping("/c2/view3")
     public String view1(ModelMap model) {
         model.addAttribute("view3_attr1", "view3_attr1");

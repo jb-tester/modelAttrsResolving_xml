@@ -15,7 +15,7 @@ method-level attribute: ${view1_attr1}
 <p/>
 controller-level attribute: ${controller1ModelAttr}
 <p/>
-implicit model attributes from controller: ${string}, ${stringList[0]}, ${fooList[0].fooStr} and ${hashMap.get("foo1").fooStr}
+implicit model attributes from controller: ${string}, ${stringList[0]}, ${fooList[0].fooStr}, ${hashMap.get("foo1").fooStr}, ${linkedHashMap.get("mapkey1")}
 </p>
 from different controller (should not be resolved): ${controller3ModelAttr}
 <p/>
