@@ -34,6 +34,12 @@ public class Controller1 {
         list.add("controller1_implicitStringListAttr");
         model.addAttribute(list);
     }
+    @ModelAttribute // ${fooList}
+    public void implicitFooArray(Model model){
+        Foo[] fooArray = {new Foo("foo1",1), new Foo("foo2",2)};
+        model.addAttribute(fooArray);
+    }
+
 
     @RequestMapping("/view1")
     public String view1(ModelMap model) {
