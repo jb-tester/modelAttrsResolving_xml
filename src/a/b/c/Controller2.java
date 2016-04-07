@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * *******************************
@@ -34,6 +36,13 @@ public class Controller2 {
         model.addAttribute("controller2_implicitStringAttr");
     }
 
+    @ModelAttribute // ${fooList}
+    public void implicitFooSet(Model model){
+        Set<Foo> fooSet = new HashSet<>();
+        fooSet.add(new Foo("foo1",1));
+        model.addAttribute(fooSet);
+        //    Set keys = model.asMap().keySet();
+    }
     @RequestMapping("/c2/view3")
     public String view1(ModelMap model) {
         model.addAttribute("view3_attr1", "view3_attr1");
