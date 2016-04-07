@@ -6,8 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * *******************************
@@ -39,11 +38,22 @@ public class Controller1 {
         Foo[] fooArray = {new Foo("foo1",1), new Foo("foo2",2)};
         model.addAttribute(fooArray);
     }
-
+    @ModelAttribute // ${hashMap}
+    public void implicitMap(Model model){
+        Map<String,Foo> myMap = new HashMap<>();
+        myMap.put("foo1", new Foo("foo1",1));
+        model.addAttribute(myMap);
+    }
 
     @RequestMapping("/view1")
     public String view1(ModelMap model) {
         model.addAttribute("view1_attr1", "view1_attr1");
+        Set attrs = model.keySet();
+        System.out.println("====model attributes available in view1:");
+        for (Object attr : attrs) {
+            String modelAttr = (String) attr;
+            System.out.println(modelAttr);
+        }
         return "view1";
     }
 
