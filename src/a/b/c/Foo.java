@@ -10,6 +10,11 @@ public class Foo {
     private String fooStr;
     private long id;
 
+    public Foo(String fooStr, long id) {
+        this.fooStr = fooStr;
+        this.id = id;
+    }
+
     public String getFooStr() {
         return fooStr;
     }
