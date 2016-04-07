@@ -46,6 +46,12 @@ public class Controller2 {
     @RequestMapping("/c2/view3")
     public String view1(ModelMap model) {
         model.addAttribute("view3_attr1", "view3_attr1");
+        Set attrs = model.keySet();
+        System.out.println("========model attributes available in view3:");
+        for (Object attr : attrs) {
+            String modelAttr = (String) attr;
+            System.out.println(modelAttr);
+        }
         return "view3";
     }
 
