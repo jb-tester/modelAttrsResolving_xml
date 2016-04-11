@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Controller()
 @SessionAttributes(value = "sessionAttr1", types = {Boo.class})
-public class Controller4 {
+public class Controller4 extends SuperController{
 
     @ModelAttribute("view7Attr")
     private String getView7Attr(){

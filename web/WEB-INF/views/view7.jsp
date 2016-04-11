@@ -12,5 +12,7 @@
 </head>
 <body>
 model attribute defined by not public method: ${view7Attr}
+<p/>
+model attribute from superclass: ${superAttr1}
 </body>
 </html>
