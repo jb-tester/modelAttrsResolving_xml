@@ -11,6 +11,12 @@
     <title>view5</title>
 </head>
 <body>
- ${numberList}
+ implicit model attributes: ${numberList} and ${dateList}
+ <p/>
+ model attribute from flash: ${flashAttr.barStr}
+<p/>
+session attributes: ${sessionAttr1}, ${sessionAttr2}, ${sessionAttr3}, ${booSessionAttr1.booStr}, ${booSessionAttr2.booStr}
+ <p/>
+check parameters with implicit annotation values: ${boo.booStr}, ${foo.fooStr}
 </body>
 </html>

@@ -15,6 +15,6 @@
   <a href="/c1/view2">view2</a>
   <a href="/c2/view3">view3</a>
   <a href="/c2/view4">view4</a>
-  <a href="/c3/view5">view5</a>
+  <a href="/c3/setup">view5</a>
   </body>
 </html>
