@@ -28,18 +28,15 @@ public class Controller2 {
         list.add("controller2_implicitStringListAttr");
         return list;
     }
-    @ModelAttribute  // ${string}
-    public void implicitString(Model model){
-        model.addAttribute("controller2_implicitStringAttr");
-    }
 
-    @ModelAttribute // ${fooList}
-    public void implicitFooSet(Model model){
+
+    @ModelAttribute //  ${string}, ${fooList}
+    public void implicitStringAndFooSet(Model model){
         Set<Foo> fooSet = new HashSet<Foo>();
         fooSet.add(new Foo("foo1",1));
         fooSet.add(new Foo("foo2",2));
-        model.addAttribute(fooSet);
-
+        model.addAttribute(fooSet); //  ${fooList}
+        model.addAttribute("controller2_implicitStringAttr"); // ${string}
     }
 
     @ModelAttribute // no attributes for empty lists!
