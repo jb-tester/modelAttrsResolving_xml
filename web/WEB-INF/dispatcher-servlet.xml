@@ -9,4 +9,14 @@
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <bean class="a.b.c.Controller5" id="controller5"/>
+    <bean class="a.b.c.Controller6" id="controller6"/>
+    <bean id="urlHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/notannotated/view8">controller5</prop>
+                <prop key="/notannotated/view9">controller6</prop>
+            </props>
+        </property>
+    </bean>
 </beans>
