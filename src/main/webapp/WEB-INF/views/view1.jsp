@@ -13,7 +13,13 @@
 <p>
 method-level attribute: ${view1_attr1}
 <p/>
-controller-level attribute: ${controller1ModelAttr}
+controller-level attribute: ${controller1ModelAttr1}
+<p/>
+controller-level attribute: ${controller1ModelAttr2}
+<p/>
+controller-level attribute: ${controller1ModelAttr2_extra}
+<p/>
+controller-level attribute: ${controller1ModelAttr3_extra}
 <p/>
 implicit model attributes from controller: ${string}, ${stringList[0]}, ${fooList[0].fooStr}, ${hashMap.get("foo1").fooStr}, ${linkedHashMap.get("mapkey1")}
 </p>

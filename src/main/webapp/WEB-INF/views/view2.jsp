@@ -6,7 +6,7 @@
 <body>
 method-level attribute: ${view2_attr1}
 <p/>
-controller-level attribute: ${controller1ModelAttr}
+controller-level attribute: ${controller1ModelAttr1}
 <p/>
 implicit model attributes from controller: ${string} and ${stringList[0]}
 </p>

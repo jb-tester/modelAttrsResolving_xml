@@ -18,11 +18,20 @@ import java.util.*;
 @RequestMapping("/c1")
 public class Controller1 {
 
-    @ModelAttribute("controller1ModelAttr")
-    public String controller1ModelAttr(){
-        return "controller1ModelAttr";
+    @ModelAttribute("controller1ModelAttr1")
+    public String controller1ModelAttr1(){
+        return "controller1ModelAttr1";
     }
-
+    @ModelAttribute("controller1ModelAttr2")
+    public String controller1ModelAttr2(Model model){
+        model.addAttribute("controller1ModelAttr2_extra","model attr, added to model in @ModelAttribute-annotated method" );
+        return "controller1ModelAttr2";
+    }
+    @ModelAttribute
+    public void controller1ModelAttr3(Model model){
+        model.addAttribute("controller1ModelAttr3_extra","model attr, added to model in @ModelAttribute-annotated method that returns void" );
+       
+    }
     @ModelAttribute
     public String implicitString(){
         return "controller1_implicitStringAttr";
