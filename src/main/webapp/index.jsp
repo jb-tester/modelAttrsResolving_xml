@@ -19,5 +19,6 @@
   <a href="c4/view7">view7</a>
   <a href="notannotated/view8">view8</a>
   <a href="notannotated/view9">view9</a>
+  <a href="/c7/test1">view7test1</a>
   </body>
 </html>

@@ -6,3 +6,4 @@
 - @ModelAttribute-annotated methods for model attributes with implicit names;
 - @SessionAttributes
 - controllers defined as <bean> elements
+- different ways to add model attrs to model inside mapping methods
